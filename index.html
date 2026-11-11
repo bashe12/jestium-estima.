@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JESTIUM Construction Ecosystem — Marketplace, ESTIMA and Enterprise Back Office">
+  <title>JESTIUM | Construction Ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="JESTIUM home"><span class="brand-mark">J</span><span>JESTIUM</span><small>CONSTRUCTION ECOSYSTEM</small></a>
+      <nav class="portal-switch" aria-label="Portal switcher">
+        <button class="portal-tab active" data-portal="marketplace">Marketplace</button>
+        <button class="portal-tab" data-portal="estima">ESTIMA Engine</button>
+        <button class="portal-tab" data-portal="enterprise">Enterprise</button>
+      </nav>
+      <div class="top-actions">
+        <select id="orgSelect" aria-label="Organization"><option>BuildCorp Cameroon SA</option><option>JESTIUM Demo Tenant</option></select>
+        <select id="roleSelect" aria-label="Role"><option value="buyer">Buyer</option><option value="merchant">Merchant</option><option value="provider">Service Provider</option><option value="engineer">Engineer</option><option value="admin">Administrator</option></select>
+        <button class="icon-btn" id="notificationsBtn" title="Notifications">♧<i></i></button>
+        <button class="user-chip" id="authBtn"><span class="avatar">BM</span><span id="authLabel">Sign in</span></button>
+      </div>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+    </header>
+
+    <div class="workspace">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-context"><span class="eyebrow">WORKSPACE</span><strong id="workspaceTitle">Marketplace</strong><span class="muted" id="workspaceSubtitle">Source construction supplies</span></div>
+        <nav id="sideNav" class="side-nav"></nav>
+        <div class="sidebar-bottom"><div class="help-card"><span class="help-icon">?</span><strong>Need assistance?</strong><p>Visit the JESTIUM help center.</p><button class="text-btn" data-action="help">Open help center →</button></div><div class="sidebar-foot">JESTIUM Prototype <span>v3.0.0</span></div></div>
+      </aside>
+
+      <main class="main-area">
+        <div class="page-topline"><div><div class="breadcrumbs" id="breadcrumbs">JESTIUM / Marketplace</div><h1 id="pageTitle">Construction marketplace</h1><p id="pageDescription">Find verified suppliers, construction materials, equipment and skilled professionals.</p></div><div class="page-actions" id="pageActions"></div></div>
+        <section id="pageContent" aria-live="polite"></section>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head"><div><span class="eyebrow" id="modalEyebrow">JESTIUM</span><h2 id="modalTitle">Dialog</h2></div><button class="close-btn" data-close-modal aria-label="Close">×</button></div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-foot" id="modalFoot"></div>
+    </section>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
